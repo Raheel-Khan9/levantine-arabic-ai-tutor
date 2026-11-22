@@ -1,0 +1,135 @@
+/* Modern Mediterranean & Levantine Cedar Theme */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Readex+Pro:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-arabic: 'Tajawal', 'Readex Pro', sans-serif;
+  --font-arabic-serif: 'Amiri', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --cedar-green: #0d5c3a;
+  --cedar-dark: #073822;
+  --cedar-light: #168353;
+  --beirut-gold: #e69d1e;
+  --beirut-amber: #f59e0b;
+  --med-sea: #0284c7;
+  --cream-bg: #f8faf9;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at 10% 20%, rgba(13, 92, 58, 0.04) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(230, 157, 30, 0.05) 0%, transparent 40%),
+              #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-arabic-serif {
+  font-family: var(--font-arabic-serif);
+}
+
+/* Glassmorphic card styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel-dark {
+  background: rgba(13, 92, 58, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px -5px rgba(7, 56, 34, 0.2);
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Interactive Arabic word hover badge */
+.clickable-word {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 3px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  position: relative;
+}
+.clickable-word:hover {
+  background: rgba(230, 157, 30, 0.22);
+  color: #073822;
+  transform: translateY(-1px);
+}
+
+/* Waveform Visualizer Animation */
+.wave-bar {
+  animation: soundPulse 1.2s ease-in-out infinite alternate;
+}
+.wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { animation-delay: 0.3s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.5s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes soundPulse {
+  0% { height: 6px; }
+  100% { height: 28px; }
+}
+
+/* 3D Flashcard Flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Pulse Glow */
+.glow-cedar {
+  box-shadow: 0 0 20px rgba(13, 92, 58, 0.35);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+}
+
+/* Badge animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeInSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
